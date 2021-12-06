@@ -1,5 +1,6 @@
 package com.BorczeAngelov.ngspringblog.controller;
 
+import com.BorczeAngelov.ngspringblog.dto.LoginRequest;
 import com.BorczeAngelov.ngspringblog.dto.RegisterRequest;
 import com.BorczeAngelov.ngspringblog.service.AuthService;
 
@@ -22,5 +23,10 @@ public class AuthController {
     public ResponseEntity<HttpStatus> signup(@RequestBody RegisterRequest registerRequest) {
         authService.signup(registerRequest);
         return new ResponseEntity<HttpStatus>(HttpStatus.OK);
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody LoginRequest loginRequest) {
+        return authService.login(loginRequest);
     }
 }
