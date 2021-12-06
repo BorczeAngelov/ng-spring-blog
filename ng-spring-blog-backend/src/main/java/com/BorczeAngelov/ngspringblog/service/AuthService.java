@@ -1,5 +1,7 @@
 package com.BorczeAngelov.ngspringblog.service;
 
+import java.util.Optional;
+
 import com.BorczeAngelov.ngspringblog.dto.LoginRequest;
 import com.BorczeAngelov.ngspringblog.dto.RegisterRequest;
 import com.BorczeAngelov.ngspringblog.model.User;
@@ -48,5 +50,11 @@ public class AuthService {
         SecurityContextHolder.getContext().setAuthentication(authenticate);
 
         return jwtProvider.generateToken(authenticate);
+    }
+
+    public Optional<org.springframework.security.core.userdetails.User> getCurrentUser() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        
+        return Optional.of((org.springframework.security.core.userdetails.User) principal);
     }
 }
