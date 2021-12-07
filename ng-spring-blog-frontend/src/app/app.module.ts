@@ -25,7 +25,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'register-success', component: RegisterSuccessComponent },
     ]),
     HttpClientModule,
   ],
