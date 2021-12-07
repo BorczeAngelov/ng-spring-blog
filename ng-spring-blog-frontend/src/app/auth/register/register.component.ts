@@ -52,7 +52,6 @@ export class RegisterComponent implements OnInit {
         .subscribe(
           data => {
             console.log('register succes', data);
-            this.router.navigateByUrl('/register-success');
           },
           error => {
             console.log('register failed');
