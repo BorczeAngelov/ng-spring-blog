@@ -1,16 +1,27 @@
 .header{
-    padding: 5px 20px;
-    background: royalblue;
-  }
-  
+  padding: 5px 20px;
+  background: royalblue;
+}
+
 .title{
-    color: aliceblue;
-    text-decoration: none;
-  }
-  
-  .login,.signup{
-    float: right;
-    text-decoration: none;
-    color: aliceblue;
-    padding-top: 10px;
-  }
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.login,.signup{
+  float: right;
+  text-decoration: none;
+  color: aliceblue;
+  padding-top: 10px;
+}
+
+.new-post{
+  float: right;
+  color: aliceblue;
+  padding-top: 10px;
+}
+
+ .new-post:hover{
+  color: aliceblue;
+  text-decoration: none;
+}
