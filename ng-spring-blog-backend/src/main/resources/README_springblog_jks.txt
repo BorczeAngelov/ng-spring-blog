@@ -1,0 +1,2 @@
+alias: springblog
+pass: keytool
